@@ -32,6 +32,18 @@ html, body {
 .header {
   padding: 0 20px;
   grid-area: 1 / 2 / 2 / 3;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.header>div {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-auto-flow: column;
+}
+.header>div>div {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
 }
 .content {
   padding: 0 20px;
@@ -39,6 +51,7 @@ html, body {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr 1fr;
+  gap: 20px;
 }
 .content>div:nth-child(1){
   background-color: red;
